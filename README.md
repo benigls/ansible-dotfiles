@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+A ansible role for installing dotfiles. All you need is a `install.sh` or any script that installs your dotfiles.
 
 Requirements
 ------------
@@ -11,7 +11,11 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+`dotfiles_repo` url of your dotfiles repository.
+
+`dotfiles_dest` destination of your dotfiles when it's cloned.
+
+`dotfiles_install_script` dotfiles installer file.
 
 Dependencies
 ------------
@@ -30,7 +34,7 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+BSD/MIT
 
 Author Information
 ------------------
