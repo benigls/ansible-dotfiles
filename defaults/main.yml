@@ -1,3 +1,4 @@
 ---
 dotfiles_repo: ""
 dotfiles_dest: ""
+dotfiles_install_script: ""
