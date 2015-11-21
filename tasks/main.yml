@@ -1,2 +1,13 @@
 ---
-# tasks file for ansible-dotfiles
+# - name: Check if {{ dotfiles_repo }} exist.
+
+- name: Cloning {{ dotfiles_repo }}.
+  sudo: no
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_dest }}"
+
+# - name: Check if {{ dotfiles_install_script }} exist.
+
+- name: Installing dotfiles.
+  shell: "sh {{dotfiles_install_script }}"
