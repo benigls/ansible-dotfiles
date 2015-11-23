@@ -1,4 +1,5 @@
 ---
 dotfiles_repo: ""
-dotfiles_dest: ""
+dotfiles_name: "dotfiles"
+dotfiles_dest: "/tmp/"
 dotfiles_install_script: ""

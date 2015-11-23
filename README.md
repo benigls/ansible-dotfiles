@@ -6,14 +6,16 @@ A ansible role for installing dotfiles. All you need is a `install.sh` or any sc
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+The only requirement is that you need a `install.sh` file or any shell script that install your dotfiles.
 
 Role Variables
 --------------
 
 `dotfiles_repo` url of your dotfiles repository.
 
-`dotfiles_dest` destination of your dotfiles when it's cloned.
+`dotfiles_name` name of the dotfiles folder. `dotfiles` is the default.
+
+`dotfiles_dest` destination of your dotfiles when it's cloned. `/tmp/` is default
 
 `dotfiles_install_script` dotfiles installer file.
 
@@ -25,11 +27,13 @@ A list of other roles hosted on Galaxy should go here, plus any details in regar
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
+    - hosts: ben
+      vars:
+        dotfiles_repo: "https://github.com/benigls/dotfiles.git"
+        dotfiles_name: "dotfiles"
+        dotfiles_install_script: "install.sh"
       roles:
-         - { role: username.rolename, x: 42 }
+        - ansible-dotfiles
 
 License
 -------

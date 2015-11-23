@@ -5,18 +5,9 @@ galaxy_info:
   license: license (BSD, MIT)
   min_ansible_version: 1.2
   platforms:
-  - name: GenericUNIX
+  - name: Ubuntu
     versions:
-    - all
-    - any
-  - name: GenericBSD
-    versions:
-    - all
-    - any
-  - name: GenericLinux
-    versions:
-    - all
-    - any
+    - trusty
   categories:
   - development
   - system

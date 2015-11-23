@@ -3,9 +3,9 @@
   sudo: no
   git:
     repo: "{{ dotfiles_repo }}"
-    dest: "{{ dotfiles_dest }}"
+    dest: "{{ dotfiles_dest }}/{{ dotfiles_name }}"
 
 - name: Installing dotfiles.
   command: sh {{ dotfiles_install_script }}
   args:
-    chdir: "{{ dotfiles_dest }}"
+    chdir: "{{ dotfiles_dest }}/{{ dotfiles_name }}"
