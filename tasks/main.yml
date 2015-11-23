@@ -1,13 +1,11 @@
 ---
-# - name: Check if {{ dotfiles_repo }} exist.
-
-- name: Cloning {{ dotfiles_repo }}.
+- name: Cloning repository.
   sudo: no
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_dest }}"
 
-# - name: Check if {{ dotfiles_install_script }} exist.
-
 - name: Installing dotfiles.
-  shell: "sh {{dotfiles_install_script }}"
+  command: sh {{ dotfiles_install_script }}
+  args:
+    chdir: "{{ dotfiles_dest }}"
