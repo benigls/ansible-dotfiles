@@ -1,4 +1,4 @@
-Role Name
+ansible-dotfiles
 =========
 
 A ansible role for installing dotfiles. All you need is a `install.sh` or any script that installs your dotfiles.
@@ -13,16 +13,11 @@ Role Variables
 
 `dotfiles_repo` url of your dotfiles repository.
 
-`dotfiles_name` name of the dotfiles folder. `dotfiles` is the default.
+`dotfiles_name` name of the repository folder. `dotfiles` is the default.
 
 `dotfiles_dest` destination of your dotfiles when it's cloned. `/tmp/` is default
 
 `dotfiles_install_script` dotfiles installer file.
-
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 Example Playbook
 ----------------
