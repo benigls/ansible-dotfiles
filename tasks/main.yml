@@ -4,8 +4,10 @@
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_dest }}/{{ dotfiles_name }}"
+  register: clone
 
 - name: Installing dotfiles.
   command: sh {{ dotfiles_install_script }}
   args:
     chdir: "{{ dotfiles_dest }}/{{ dotfiles_name }}"
+  when: clone|success
